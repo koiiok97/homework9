@@ -26,12 +26,12 @@ public class Main {
 
         System.out.println("\nЗадание 4");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        String name = "";
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            name += reverseFullName[i];
+
+        for (int i = 0, j = reverseFullName.length - 1; i <= j; i++, j--) {
+            char temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[j];
+            reverseFullName[j] = temp;
         }
-        System.out.println(name);
-
-
+        System.out.println(reverseFullName);
     }
 }
